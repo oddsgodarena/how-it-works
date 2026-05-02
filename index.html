@@ -276,51 +276,27 @@
     <div class="label">Season 1 Rankings</div>
     <h2>THE GOD BOARD</h2>
     <p>The God Board doesn't lie. No algorithms. No follower counts. Just your predictions against reality. Every question that resolves tells the truth about who saw it coming. The top of this board belongs to whoever was right when it mattered.</p>
-    <div id="leaderboard-container" style="margin-top:20px;">
-  <table class="tbl" id="leaderboard-table">
-    <thead>
-      <tr>
-        <th>Position</th>
-        <th>Handle</th>
-        <th>Rank</th>
-        <th style="text-align:right">Total Credits</th>
-      </tr>
-    </thead>
-    <tbody id="leaderboard-body">
-      <tr><td colspan="4" style="text-align:center;color:var(--muted)">Loading rankings...</td></tr>
-    </tbody>
-  </table>
+    <table class="tbl" style="margin-top:20px;">
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th>Handle</th>
+          <th>Rank</th>
+          <th style="text-align:right">Total Credits</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td style="color:var(--white);font-weight:600">the3trees</td>
+          <td style="color:var(--muted)">COG</td>
+          <td class="val">100</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:var(--muted);margin-top:12px;">⟶ Rankings update as Season 1 questions resolve. Last updated: May 2026.</p>
+  </section>
 </div>
-
-<script>
-fetch('https://docs.google.com/spreadsheets/d/1UQt0mXOpvox30WuHrxIpTL2us6ZjxunQay2lQvPW5ko/edit?pli=1&gid=517925651#gid=517925651')
-  .then(response => response.text())
-  .then(csv => {
-    const rows = csv.split('\n').slice(1);
-    const tbody = document.getElementById('leaderboard-body');
-    tbody.innerHTML = '';
-    rows.forEach(row => {
-      if (!row.trim()) return;
-      const cols = row.split(',');
-      if (!cols[1] || cols[1].trim() === '') return;
-      const rankClass = cols[2] && cols[2].includes('GOD') ? 'var(--gold)' : 
-                        cols[2] && cols[2].includes('SEER') ? 'var(--cyan)' : 
-                        'var(--muted)';
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td>${cols[0] || ''}</td>
-        <td style="color:var(--white);font-weight:600">${cols[1] || ''}</td>
-        <td style="color:${rankClass}">${cols[2] || ''}</td>
-        <td class="val">${cols[3] || ''}</td>
-      `;
-      tbody.appendChild(tr);
-    });
-  })
-  .catch(() => {
-    document.getElementById('leaderboard-body').innerHTML = 
-      '<tr><td colspan="4" style="text-align:center;color:var(--muted)">Rankings updating...</td></tr>';
-  });
-</script>
   </section>
 </div>
   <div class="cta">
