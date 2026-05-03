@@ -22,8 +22,6 @@
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { background:var(--cobalt); color:var(--silver); font-family:'DM Sans',Arial,sans-serif; font-size:15px; line-height:1.7; overflow-x:hidden; }
-
-  /* HERO */
   .hero { background:var(--deep); text-align:center; padding:80px 24px 64px; position:relative; border-bottom:1px solid rgba(57,255,20,0.15); }
   .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 50% at 50% 0%, rgba(57,255,20,0.07) 0%, transparent 70%); pointer-events:none; }
   .eyebrow { font-family:'Space Mono',monospace; font-size:11px; letter-spacing:4px; color:var(--cyan); text-transform:uppercase; margin-bottom:20px; }
@@ -32,24 +30,18 @@
   .tagline { font-family:'Space Mono',monospace; font-size:12px; letter-spacing:5px; color:var(--muted); text-transform:uppercase; }
   .tagline span { color:var(--cyan); }
   .greenline { height:1px; background:linear-gradient(90deg,var(--green),transparent); opacity:.25; }
-
-  /* LAYOUT */
   .wrap { max-width:920px; margin:0 auto; padding:0 24px; }
   section { padding:64px 0; border-bottom:1px solid rgba(255,255,255,0.05); }
   section:last-of-type { border-bottom:none; }
   .label { font-family:'Space Mono',monospace; font-size:10px; letter-spacing:4px; color:var(--cyan); text-transform:uppercase; margin-bottom:10px; }
   h2 { font-family:'Montserrat',Arial,sans-serif; font-weight:800; font-size:clamp(20px,3vw,28px); color:var(--white); margin-bottom:20px; line-height:1.2; text-transform:uppercase; letter-spacing:1px; }
   p { color:var(--silver); margin-bottom:14px; font-size:15px; }
-
-  /* STEPS */
   .steps { display:flex; flex-direction:column; gap:13px; }
   .step { display:flex; gap:20px; background:var(--midnight); border:1px solid rgba(57,255,20,0.07); border-radius:5px; padding:22px 24px; transition:border-color .2s; }
   .step:hover { border-color:rgba(57,255,20,0.28); }
   .snum { font-family:'Montserrat',sans-serif; font-weight:800; font-size:24px; color:var(--green); opacity:.35; min-width:34px; line-height:1; padding-top:3px; }
   .step h3 { font-family:'Montserrat',sans-serif; font-weight:600; font-size:12px; color:var(--cyan); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px; }
   .step p { margin:0; font-size:14px; }
-
-  /* RANKS */
   .ranks { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:13px; margin-top:10px; }
   .rcard { background:var(--midnight); border-radius:5px; padding:26px 20px; text-align:center; border:1px solid rgba(255,255,255,0.06); transition:border-color .2s,transform .2s; }
   .rcard:hover { border-color:rgba(102,252,241,.2); transform:translateY(-2px); }
@@ -61,24 +53,18 @@
   .rname.seer { color:var(--cyan); }
   .rname.god { color:var(--gold); }
   .rdesc { font-size:13px; color:var(--muted); margin:0; }
-
-  /* TABLE */
   .tbl { width:100%; border-collapse:collapse; margin-top:10px; font-family:'Space Mono',monospace; }
   .tbl th { text-align:left; padding:11px 16px; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--cyan); border-bottom:1px solid rgba(102,252,241,.15); }
   .tbl td { padding:13px 16px; font-size:13px; color:var(--silver); border-bottom:1px solid rgba(255,255,255,.04); }
   .tbl tr:last-child td { border-bottom:none; }
   .tbl .val { color:var(--green); font-weight:700; text-align:right; }
   .tbl tr:hover td { background:rgba(57,255,20,.025); }
-
-  /* CAUSES */
   .causes { display:grid; grid-template-columns:repeat(auto-fit,minmax(195px,1fr)); gap:13px; margin-top:20px; }
   .ccard { background:var(--midnight); border:1px solid rgba(255,255,255,.06); border-radius:5px; padding:22px 18px; text-align:center; transition:border-color .2s,transform .2s; }
   .ccard:hover { border-color:rgba(57,255,20,.2); transform:translateY(-2px); }
   .cicon { font-size:28px; margin-bottom:9px; display:block; }
   .cname { font-family:'Montserrat',sans-serif; font-weight:600; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:7px; }
   .cdesc { font-size:12px; color:var(--muted); margin:0; }
-
-  /* TIMELINE */
   .tl { position:relative; padding-left:28px; }
   .tl::before { content:''; position:absolute; left:6px;top:8px;bottom:8px; width:1px; background:linear-gradient(to bottom,var(--green),transparent); }
   .tli { position:relative; margin-bottom:28px; }
@@ -87,14 +73,9 @@
   .tdate { font-family:'Space Mono',monospace; font-size:10px; color:var(--cyan); letter-spacing:2px; text-transform:uppercase; margin-bottom:3px; }
   .ttitle { font-family:'Montserrat',sans-serif; font-weight:800; font-size:12px; color:var(--white); margin-bottom:4px; text-transform:uppercase; letter-spacing:1px; }
   .tdesc { font-size:13px; color:var(--muted); margin:0; }
-
-  /* BADGES */
   .live { display:inline-flex; align-items:center; gap:5px; background:rgba(57,255,20,.1); border:1px solid rgba(57,255,20,.3); color:var(--green); font-family:'Space Mono',monospace; font-size:10px; letter-spacing:2px; padding:2px 9px; border-radius:3px; text-transform:uppercase; vertical-align:middle; margin-left:8px; }
   .live::before { content:''; width:6px;height:6px; border-radius:50%; background:var(--green); animation:blink 1.4s infinite; }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
-  .resolved { display:inline-block; background:rgba(255,210,76,.1); border:1px solid rgba(255,210,76,.3); color:var(--gold); font-family:'Space Mono',monospace; font-size:10px; letter-spacing:2px; padding:2px 9px; border-radius:3px; text-transform:uppercase; vertical-align:middle; margin-left:8px; }
-
-  /* INFO BOXES */
   .box { border-radius:5px; padding:18px 22px; margin-top:18px; }
   .box p { margin:0; font-size:14px; }
   .box.g { background:rgba(57,255,20,.05); border:1px solid rgba(57,255,20,.2); }
@@ -103,18 +84,13 @@
   .box.c strong { color:var(--cyan); }
   .box.gold { background:rgba(255,210,76,.05); border:1px solid rgba(255,210,76,.2); }
   .box.gold strong { color:var(--gold); }
-
-  /* CTA */
   .cta { background:var(--deep); text-align:center; padding:80px 24px; position:relative; }
   .cta::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 50% 100%,rgba(57,255,20,.07) 0%,transparent 65%); pointer-events:none; }
   .cta h2 { font-family:'Montserrat',sans-serif; font-weight:800; font-size:clamp(26px,4vw,42px); color:var(--green); margin-bottom:14px; text-transform:uppercase; letter-spacing:2px; }
   .cta p { color:var(--muted); max-width:480px; margin:0 auto 32px; }
   .btn { display:inline-block; background:var(--green); color:var(--deep); font-family:'Montserrat',sans-serif; font-weight:800; font-size:13px; letter-spacing:3px; text-transform:uppercase; padding:16px 44px; border-radius:3px; text-decoration:none; transition:all .2s; box-shadow:0 0 30px rgba(57,255,20,.25); }
   .btn:hover { background:#5FFF3A; box-shadow:0 0 50px rgba(57,255,20,.45); transform:translateY(-2px); }
-
-  /* FOOTER */
   .foot { text-align:center; padding:22px; font-family:'Space Mono',monospace; font-size:10px; color:var(--muted); border-top:1px solid rgba(255,255,255,.04); background:var(--deep); }
-
   @media(max-width:600px){
     .ranks,.causes{grid-template-columns:1fr;}
     .step{flex-direction:column;gap:9px;}
@@ -125,10 +101,10 @@
 <body>
 
 <div class="hero">
-  <div class="eyebrow">⚡ Odds God &nbsp;|&nbsp; Season 1 &nbsp;|&nbsp; Now Live</div>
+  <div class="eyebrow">&#x26A1; Odds God &nbsp;|&nbsp; Season 1 &nbsp;|&nbsp; Now Live</div>
   <h1>How It Works</h1>
   <p>No money. No risk. Just your instincts, the news, and the question everyone is afraid to answer out loud.</p>
-  <div class="tagline"><span>Predict</span> &nbsp;·&nbsp; <span>Prosper</span> &nbsp;·&nbsp; <span>Transform</span></div>
+  <div class="tagline"><span>Predict</span> &nbsp;&middot;&nbsp; <span>Prosper</span> &nbsp;&middot;&nbsp; <span>Transform</span></div>
 </div>
 <div class="greenline"></div>
 
@@ -141,7 +117,7 @@
       <div class="step"><div class="snum">01</div><div><h3>Choose Your Handle</h3><p>Pick a public display name — this is how you appear on the leaderboard. Make it memorable. Gods are recognized.</p></div></div>
       <div class="step"><div class="snum">02</div><div><h3>Submit Your Predictions</h3><p>Answer the Season 1 questions. Each answer locks in at submission — no take-backs, one entry per question. An optional email lets us notify you when your predictions resolve.</p></div></div>
       <div class="step"><div class="snum">03</div><div><h3>Watch the World Prove You Right (or Wrong)</h3><p>Questions resolve as real-world events unfold — rolling throughout the season, not all at once. When a question resolves, credited players are updated automatically. Check back often. The leaderboard shifts with every resolution.</p></div></div>
-      <div class="step"><div class="snum">04</div><div><h3>Earn Impact Credits</h3><p>Correct predictions earn Impact Credits directed to real-world causes you choose. No money changes hands. You fund change with your accuracy.</p></div></div>
+      <div class="step"><div class="snum">04</div><div><h3>Earn Impact Credits</h3><p>Correct predictions earn Impact Credits that will direct real-world giving when platform sponsorship launches in Season 2. No money changes hands. You build your giving rank with your accuracy.</p></div></div>
     </div>
   </section>
 
@@ -150,9 +126,9 @@
     <h2>Which One Are You?</h2>
     <p>Your rank reflects overall prediction accuracy across all resolved questions. Ranks update in real time as Season 1 progresses.</p>
     <div class="ranks">
-      <div class="rcard"><span class="ricon">⚙️</span><div class="rname cog">Cog</div><p class="rdesc">You react to the news. Still learning to read the signals. Everyone starts here.</p></div>
-      <div class="rcard"><span class="ricon">🔮</span><div class="rname seer">Seer</div><p class="rdesc">You anticipate events before they happen. Accuracy above the crowd. The pattern is becoming clear.</p></div>
-      <div class="rcard god"><span class="ricon">⚡</span><div class="rname god">God</div><p class="rdesc">You define the odds. Consistent, verifiable foresight. The leaderboard belongs to you.</p></div>
+      <div class="rcard"><span class="ricon">&#x2699;&#xFE0F;</span><div class="rname cog">Cog</div><p class="rdesc">You react to the news. Still learning to read the signals. Everyone starts here.</p></div>
+      <div class="rcard"><span class="ricon">&#x1F52E;</span><div class="rname seer">Seer</div><p class="rdesc">You anticipate events before they happen. Accuracy above the crowd. The pattern is becoming clear.</p></div>
+      <div class="rcard god"><span class="ricon">&#x26A1;</span><div class="rname god">God</div><p class="rdesc">You define the odds. Consistent, verifiable foresight. The leaderboard belongs to you.</p></div>
     </div>
   </section>
 
@@ -169,29 +145,21 @@
         <tr><td>Monthly top predictor</td><td>Awarded last day of each month</td><td class="val">5,000</td></tr>
       </tbody>
     </table>
-    <div class="box g"><p><strong>What are credits worth?</strong> Season 1 establishes the player base and accuracy rankings. When platform sponsorship launches in Season 2, Impact Credits will begin directing real charitable dollars. The more players Season 1 builds, the bigger that number becomes.</strong> The variable is player count. That's what your predictions help build.</p></div>
+    <div class="box g"><p><strong>What are credits worth?</strong> Season 1 Impact Credits establish your giving rank. Actual charitable disbursements activate when platform sponsorship launches in Season 2. The more players Season 1 builds, the bigger that number becomes.</p></div>
     <div class="box c" style="margin-top:12px"><p><strong>Important:</strong> Impact Credits are not currency. They cannot be withdrawn, traded, or redeemed for personal gain. They direct charitable giving only. This is by design — and it's what makes Odds God legal, global, and genuinely different from prediction markets.</p></div>
-  </section>
-
-  <section>
-    <div class="label">Credits → Real Impact</div>
-    <h2>How Credits Translate to Dollars</h2>
-    <p>Season 1 Impact Credits establish your giving rank. Actual charitable disbursements activate when platform sponsorship launches in Season 2.
-</p>
-    
   </section>
 
   <section>
     <div class="label">Where Credits Go</div>
     <h2>The Causes You're Playing For</h2>
-    <p>Players designate their preferred cause at registration. Credits flow proportionally. At season end, every dollar, every cause, every source is published publicly.</p>
+    <p>Players designate their preferred cause at registration. Credits flow proportionally. When sponsorship launches in Season 2, every dollar, every cause, every source will be published publicly.</p>
     <div class="causes">
-      <div class="ccard"><span class="cicon">🍽️</span><div class="cname" style="color:#F97316">Hunger Relief</div><p class="cdesc">Food banks, school lunch programs, emergency nutrition access.</p></div>
-      <div class="ccard"><span class="cicon">🌍</span><div class="cname" style="color:#22C55E">Environment</div><p class="cdesc">Climate resilience, reforestation, ocean cleanup, sustainability.</p></div>
-      <div class="ccard"><span class="cicon">💧</span><div class="cname" style="color:#38BDF8">Clean Water</div><p class="cdesc">Potable water access for underserved communities globally.</p></div>
-      <div class="ccard"><span class="cicon">🎓</span><div class="cname" style="color:#A78BFA">Education</div><p class="cdesc">Literacy, vocational training, scholarships, digital access.</p></div>
-      <div class="ccard"><span class="cicon">🧠</span><div class="cname" style="color:#F472B6">Mental Health &amp; Addiction</div><p class="cdesc">Problem gambling recovery, substance use treatment, mental health access.</p></div>
-      <div class="ccard"><span class="cicon">🐾</span><div class="cname" style="color:#FB923C">Animal Welfare</div><p class="cdesc">Rescue, rights advocacy, wildlife conservation, anti-cruelty.</p></div>
+      <div class="ccard"><span class="cicon">&#x1F37D;&#xFE0F;</span><div class="cname" style="color:#F97316">Hunger Relief</div><p class="cdesc">Food banks, school lunch programs, emergency nutrition access.</p></div>
+      <div class="ccard"><span class="cicon">&#x1F30D;</span><div class="cname" style="color:#22C55E">Environment</div><p class="cdesc">Climate resilience, reforestation, ocean cleanup, sustainability.</p></div>
+      <div class="ccard"><span class="cicon">&#x1F4A7;</span><div class="cname" style="color:#38BDF8">Clean Water</div><p class="cdesc">Potable water access for underserved communities globally.</p></div>
+      <div class="ccard"><span class="cicon">&#x1F393;</span><div class="cname" style="color:#A78BFA">Education</div><p class="cdesc">Literacy, vocational training, scholarships, digital access.</p></div>
+      <div class="ccard"><span class="cicon">&#x1F9E0;</span><div class="cname" style="color:#F472B6">Mental Health &amp; Addiction</div><p class="cdesc">Problem gambling recovery, substance use treatment, mental health access.</p></div>
+      <div class="ccard"><span class="cicon">&#x1F43E;</span><div class="cname" style="color:#FB923C">Animal Welfare</div><p class="cdesc">Rescue, rights advocacy, wildlife conservation, anti-cruelty.</p></div>
     </div>
   </section>
 
@@ -199,7 +167,7 @@
     <div class="label">Why This Exists</div>
     <h2>The Mission Behind the Game</h2>
     <p>Here's an uncomfortable truth: the same psychological wiring that pulls people toward gambling — the need to be right, the thrill of prediction, the dopamine hit of a correct call — exists in every one of us. The platforms built to capture that impulse are optimized for one thing: keeping you spending.</p>
-    <p>Nobody asked what happens if you redirect that energy instead of fight it. Odds God is the answer. Same competitive drive. Same satisfaction of a confirmed call. No money in, no money out — and your accuracy funds real change in the world.</p>
+    <p>Nobody asked what happens if you redirect that energy instead of fight it. Odds God is the answer. Same competitive drive. Same satisfaction of a confirmed call. No money in, no money out — and your accuracy builds toward real change in the world.</p>
     <div class="box g"><p><strong>The numbers are not abstract.</strong> An estimated 10 million Americans meet criteria for problem gambling. The fastest-growing segment is 18–34 year olds, normalized by sports betting apps built to look like games. Odds God doesn't lecture anyone. <strong>It offers a better game.</strong></p></div>
     <div class="box c" style="margin-top:12px"><p><strong>The prediction data matters too.</strong> Crowd-sourced accuracy has genuine research value — more accurate than polls, more honest than punditry. Odds God captures that intelligence and makes it available to researchers and institutions who want to understand what people actually believe will happen.</p></div>
   </section>
@@ -209,9 +177,9 @@
     <h2>Who We're Building With</h2>
     <p>Odds God is actively seeking partnerships with organizations that see value in both the social good and the data intelligence this platform produces.</p>
     <div class="steps">
-      <div class="step"><div class="snum" style="font-size:20px">🏛️</div><div><h3>Fiscal Sponsors &amp; Foundations</h3><p>Odds God operates under fiscal sponsorship while building toward Public Benefit Corporation status. We are pursuing partnerships with foundations focused on addiction recovery, digital literacy, and civic engagement.</p></div></div>
-      <div class="step"><div class="snum" style="font-size:20px">📊</div><div><h3>Research &amp; Data Partners</h3><p>Universities, think tanks, journalists, and policy researchers can license aggregated, anonymized prediction data. Your individual identity is never sold. The collective signal — what thousands of people genuinely believe will happen — has legitimate academic and journalistic value.</p></div></div>
-      <div class="step"><div class="snum" style="font-size:20px">🤝</div><div><h3>Mission-Aligned Sponsors</h3><p>Brands and organizations whose values align with civic engagement, financial literacy, and social impact. No sponsors that contradict what we're building. The platform is not for sale to interests that conflict with the mission.</p></div></div>
+      <div class="step"><div class="snum" style="font-size:20px">&#x1F3DB;&#xFE0F;</div><div><h3>Fiscal Sponsors &amp; Foundations</h3><p>Odds God is pursuing fiscal sponsorship while building toward Public Benefit Corporation status. We are seeking partnerships with foundations focused on addiction recovery, digital literacy, and civic engagement.</p></div></div>
+      <div class="step"><div class="snum" style="font-size:20px">&#x1F4CA;</div><div><h3>Research &amp; Data Partners</h3><p>Universities, think tanks, journalists, and policy researchers can license aggregated, anonymized prediction data. Your individual identity is never sold. The collective signal — what thousands of people genuinely believe will happen — has legitimate academic and journalistic value.</p></div></div>
+      <div class="step"><div class="snum" style="font-size:20px">&#x1F91D;</div><div><h3>Mission-Aligned Sponsors</h3><p>Brands and organizations whose values align with civic engagement, financial literacy, and social impact. No sponsors that contradict what we're building. The platform is not for sale to interests that conflict with the mission.</p></div></div>
     </div>
     <div class="box gold"><p><strong>Interested in partnering?</strong> Contact us at oddsgod@proveitforward.com</p></div>
   </section>
@@ -221,8 +189,8 @@
     <h2>The Live Leaderboard</h2>
     <p>Odds God isn't a form you submit and forget. The leaderboard is public, live, and moves in real time as questions resolve throughout the season.</p>
     <div class="steps">
-      <div class="step"><div class="snum" style="font-size:20px">📺</div><div><h3>Live on YouTube</h3><p>The Odds God leaderboard streams live on the Prove It Forward YouTube channel. When a major question resolves — SpaceX IPO trades, Powell steps down, Bitcoin hits $100K — the leaderboard updates on air in real time. The resolution moment is a live event.</p></div></div>
-      <div class="step"><div class="snum" style="font-size:20px">🏆</div><div><h3>Public Rankings</h3><p>Your handle is public. Your accuracy is public. Gods are recognized. If you're at the top of the leaderboard when a question resolves on stream, that moment is yours. Screenshot it. Share it. Prove it forward.</p></div></div>
+      <div class="step"><div class="snum" style="font-size:20px">&#x1F4FA;</div><div><h3>Coming Soon — Live on YouTube</h3><p>The Odds God leaderboard will stream live on the Prove It Forward YouTube channel. When a major question resolves — SpaceX IPO trades, Powell steps down, Bitcoin hits $100K — the leaderboard will update on air in real time. The resolution moment will be a live event.</p></div></div>
+      <div class="step"><div class="snum" style="font-size:20px">&#x1F3C6;</div><div><h3>Public Rankings</h3><p>Your handle is public. Your accuracy is public. Gods are recognized. If you're at the top of the leaderboard when a question resolves, that moment is yours. Screenshot it. Share it. Prove it forward.</p></div></div>
     </div>
   </section>
 
@@ -231,10 +199,10 @@
     <h2>How Answers Are Determined</h2>
     <p>Every Season 1 question has a verifiable, publicly documented correct answer. No judgment calls. No editorial discretion.</p>
     <div class="steps">
-      <div class="step"><div class="snum" style="font-size:18px">📰</div><div><h3>Primary Source Confirmation</h3><p>Questions resolve based on confirmed reporting from major news organizations, official government statements, SEC filings, or primary public documentation. Not rumor. Not speculation. Confirmed fact only.</p></div></div>
-      <div class="step"><div class="snum" style="font-size:18px">⚡</div><div><h3>Rolling Resolution</h3><p>Questions resolve the moment the real-world event is confirmed — not all at once at season end. When GPT-5 launched March 24, that question resolved March 24. You'll be notified by email if you provided one.</p></div></div>
-      <div class="step"><div class="snum" style="font-size:18px">🔒</div><div><h3>Hard Deadline — June 30, 2026</h3><p>Any question still open on June 30, 2026 resolves at 11:59 PM Pacific based on best available evidence. No extensions. The season is the season.</p></div></div>
-      <div class="step"><div class="snum" style="font-size:18px">📋</div><div><h3>Public Resolution Log</h3><p>Every resolved question is logged publicly with source documentation. Every ruling is verifiable. Transparency isn't optional here — it's the whole point.</p></div></div>
+      <div class="step"><div class="snum" style="font-size:18px">&#x1F4F0;</div><div><h3>Primary Source Confirmation</h3><p>Questions resolve based on confirmed reporting from major news organizations, official government statements, SEC filings, or primary public documentation. Not rumor. Not speculation. Confirmed fact only.</p></div></div>
+      <div class="step"><div class="snum" style="font-size:18px">&#x26A1;</div><div><h3>Rolling Resolution</h3><p>Questions resolve the moment the real-world event is confirmed — not all at once at season end. When GPT-5 launched March 24, that question resolved March 24. You'll be notified by email if you provided one.</p></div></div>
+      <div class="step"><div class="snum" style="font-size:18px">&#x1F512;</div><div><h3>Hard Deadline — June 30, 2026</h3><p>Any question still open on June 30, 2026 resolves at 11:59 PM Pacific based on best available evidence. No extensions. The season is the season.</p></div></div>
+      <div class="step"><div class="snum" style="font-size:18px">&#x1F4CB;</div><div><h3>Public Resolution Log</h3><p>Every resolved question is logged publicly with source documentation. Every ruling is verifiable. Transparency isn't optional here — it's the whole point.</p></div></div>
     </div>
   </section>
 
@@ -256,47 +224,62 @@
     <h2>This Is the Beginning, Not the Finished Product</h2>
     <p>Season 1 is a Minimum Viable Product. We're saying that openly because you deserve to know what you're playing and what it's becoming.</p>
     <div class="steps">
-      <div class="step"><div class="snum">→</div><div><h3>What Season 1 Is</h3><p>A prediction form, a live leaderboard, 18 carefully selected questions, and an early community building this with us. Simple by design. The questions are serious. The stakes — for the causes — are real.</p></div></div>
-      <div class="step"><div class="snum">→</div><div><h3>What's Coming</h3><p>A full platform with automated scoring, player profiles, daily and weekly prediction cycles, cause dashboards showing real-time impact, mobile app, and expanded question categories. The quarterly structure stays. Everything else scales.</p></div></div>
-      <div class="step"><div class="snum">→</div><div><h3>Why Play Now</h3><p>Early players build their accuracy history from Season 1. When the platform scales, the Gods who called it right when the game was new will have the receipts. There's no retroactive founding member status — you either have Season 1 predictions on record or you don't.</p></div></div>
+      <div class="step"><div class="snum">&#x2192;</div><div><h3>What Season 1 Is</h3><p>A prediction form, a live leaderboard, 18 carefully selected questions, and an early community building this with us. Simple by design. The questions are serious. The stakes — for the causes — are real.</p></div></div>
+      <div class="step"><div class="snum">&#x2192;</div><div><h3>What's Coming</h3><p>A full platform with automated scoring, player profiles, daily and weekly prediction cycles, cause dashboards showing real-time impact, mobile app, and expanded question categories. The quarterly structure stays. Everything else scales.</p></div></div>
+      <div class="step"><div class="snum">&#x2192;</div><div><h3>Why Play Now</h3><p>Early players build their accuracy history from Season 1. When the platform scales, the Gods who called it right when the game was new will have the receipts. There's no retroactive founding member status — you either have Season 1 predictions on record or you don't.</p></div></div>
     </div>
     <div class="box g"><p><strong>Want to help build it?</strong> We're looking for developers, cause partners, advisors, and early community builders. Reach out: <strong>oddsgod@proveitforward.com</strong></p></div>
   </section>
 
-</div>
-
-<div class="wrap">
   <section>
     <div class="label">Season 1 Rankings</div>
     <h2>THE GOD BOARD</h2>
     <p>The God Board doesn't lie. No algorithms. No follower counts. Just your predictions against reality. Every question that resolves tells the truth about who saw it coming. The top of this board belongs to whoever was right when it mattered.</p>
-    <table class="tbl" style="margin-top:20px;">
-      <thead>
-        <tr>
-          <th>Position</th>
-          <th>Handle</th>
-          <th>Rank</th>
-          <th style="text-align:right">Total Credits</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td style="color:var(--white);font-weight:600">the3trees</td>
-          <td style="color:var(--muted)">COG</td>
-          <td class="val">100</td>
-        </tr>
-      </tbody>
-    </table>
-    <p style="font-size:12px;color:var(--muted);margin-top:12px;">⟶ Rankings update as Season 1 questions resolve. Last updated: May 2026.</p>
+    <div id="leaderboard-container" style="margin-top:20px;">
+      <table class="tbl" id="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Handle</th>
+            <th>Rank</th>
+            <th style="text-align:right">Total Credits</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard-body">
+          <tr><td colspan="4" style="text-align:center;color:var(--muted)">Loading rankings...</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <script>
+    fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTIHBwEGNEt7IeSGdufavv8cUvuhY19pkX8LJ9cnTXjzoeX4P5zK6lw1st8GDPI55XlaJB2sZLPaDK5/pub?output=csv&gid=517925651')
+      .then(response => response.text())
+      .then(csv => {
+        const rows = csv.split('\n').slice(1);
+        const tbody = document.getElementById('leaderboard-body');
+        tbody.innerHTML = '';
+        rows.forEach(row => {
+          if (!row.trim()) return;
+          const cols = row.split(',');
+          if (!cols[1] || cols[1].trim() === '') return;
+          const rankVal = cols[2] ? cols[2].trim() : '';
+          const rankColor = rankVal.includes('GOD') ? 'var(--gold)' : rankVal.includes('SEER') ? 'var(--cyan)' : 'var(--muted)';
+          const tr = document.createElement('tr');
+          tr.innerHTML = '<td>' + (cols[0]||'') + '</td><td style="color:var(--white);font-weight:600">' + (cols[1]||'') + '</td><td style="color:' + rankColor + '">' + rankVal + '</td><td class="val">' + (cols[3]||'') + '</td>';
+          tbody.appendChild(tr);
+        });
+      })
+      .catch(() => {
+        document.getElementById('leaderboard-body').innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--muted)">Rankings updating...</td></tr>';
+      });
+    </script>
   </section>
+
 </div>
-  </section>
-</div>
-  <div class="cta">
+
+<div class="cta">
   <h2>Ready to Prove It?</h2>
   <p>18 questions. One chance to lock in your predictions. The world resolves the rest.</p>
-  <a href="https://proveitforward.com/#submityourpredictionsform" target="_blank" class="btn">Make Your Predictions</a>
+  <a href="https://proveitforward.com" target="_blank" class="btn">Make Your Predictions</a>
 </div>
 
 <div class="foot">
